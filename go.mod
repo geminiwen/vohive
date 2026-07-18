@@ -110,3 +110,7 @@ require (
 )
 
 replace github.com/emiago/sipgo => ./third_party/sipgo
+
+replace github.com/1239t/vowifi-go => github.com/geminiwen/vowifi-go v1.1.3
+
+replace github.com/1239t/swu-go => github.com/geminiwen/swu-go v0.0.3
