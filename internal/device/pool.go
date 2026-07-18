@@ -23,8 +23,8 @@ import (
 	"github.com/iniwex5/vohive/internal/vowifihost"
 	"github.com/iniwex5/vohive/pkg/logger"
 	"github.com/iniwex5/vohive/pkg/smscodec"
-	"github.com/iniwex5/vowifi-go/runtimehost"
-	"github.com/iniwex5/vowifi-go/runtimehost/voicehost"
+	"github.com/1239t/vowifi-go/runtimehost"
+	"github.com/1239t/vowifi-go/runtimehost/voicehost"
 
 	qmimanager "github.com/iniwex5/quectel-qmi-go/pkg/manager"
 	"github.com/iniwex5/quectel-qmi-go/pkg/qmi"

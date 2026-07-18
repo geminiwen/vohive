@@ -11,8 +11,8 @@ import (
 	"github.com/iniwex5/vohive/internal/cardpolicy"
 	"github.com/iniwex5/vohive/internal/config"
 	"github.com/iniwex5/vohive/internal/vowifihost"
-	"github.com/iniwex5/vowifi-go/runtimehost"
-	"github.com/iniwex5/vowifi-go/runtimehost/carrier"
+	"github.com/1239t/vowifi-go/runtimehost"
+	"github.com/1239t/vowifi-go/runtimehost/carrier"
 )
 
 func newDesiredVoWiFiTestPool(t *testing.T, deviceID string, enabled bool, imsi string) *Pool {

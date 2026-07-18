@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/iniwex5/vohive/internal/db"
-	"github.com/iniwex5/vowifi-go/runtimehost/messaging"
+	"github.com/1239t/vowifi-go/runtimehost/messaging"
 	"gorm.io/gorm"
 )
 
