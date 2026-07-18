@@ -1,41 +1,28 @@
 package device
 
 import (
-	"fmt"
-	"strings"
-
 	"github.com/iniwex5/vohive/internal/config"
 )
 
-const DefaultFreeDeviceLimit = 5
+// DefaultFreeDeviceLimit 表示允许的设备数量上限。0 表示不限量：前端凭
+// deviceLimit > 0 判断是否展示配额徽章，为 0 时徽章隐藏，后端各闸门函数
+// 也一律放行。
+const DefaultFreeDeviceLimit = 0
 
+// FreeDeviceLimitReached 恒为 false：不再限制设备数量。
 func FreeDeviceLimitReached(count int) bool {
-	return count >= DefaultFreeDeviceLimit
+	return false
 }
 
 func FreeDeviceAddLimitMessage() string {
-	return fmt.Sprintf("当前版本最多只能添加 %d 个设备", DefaultFreeDeviceLimit)
+	return ""
 }
 
 func FreeDeviceWorkerLimitMessage() string {
-	return fmt.Sprintf("当前版本最多只能启动 %d 个设备", DefaultFreeDeviceLimit)
+	return ""
 }
 
+// FreeDeviceLimitAllowsConfiguredDevice 恒为 true：不再限制设备数量。
 func FreeDeviceLimitAllowsConfiguredDevice(devices []config.DeviceConfig, deviceID string) bool {
-	deviceID = strings.TrimSpace(deviceID)
-	if deviceID == "" {
-		return true
-	}
-	seen := 0
-	for _, dev := range devices {
-		id := strings.TrimSpace(dev.ID)
-		if id == "" {
-			continue
-		}
-		seen++
-		if id == deviceID {
-			return seen <= DefaultFreeDeviceLimit
-		}
-	}
 	return true
 }
